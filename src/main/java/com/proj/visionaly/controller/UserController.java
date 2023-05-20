@@ -9,10 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
-@RestController()
+@RestController("v1_userController")
 @RequestMapping(value = "/v1/api/users", produces = { MediaType.APPLICATION_JSON_VALUE })
 @RequiredArgsConstructor
-public class MainController {
+public class UserController {
 
     private final UserService userService;
 

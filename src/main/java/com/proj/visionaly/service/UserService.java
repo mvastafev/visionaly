@@ -60,6 +60,11 @@ public class UserService implements UserDetailsService, IUserService {
         return roleRepo.saveAndFlush(role);
     }
 
+    public User findAllUserInfo(String username) {
+        log.info("Collection all info of user = " + username + "...");
+        return userRepo.findAllUserInfo(username);
+    }
+
     @Override
     public void addRoleToUser(String username, String roleName) {
         User user = userRepo.findByUsername(username);

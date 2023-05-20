@@ -2,12 +2,14 @@ package com.proj.visionaly;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+
+
+//we can use only SpringBootApp annotation instead of following 3 annotations
+//@EnableAutoConfiguration
+//@EntityScan("com.proj.visionaly.models")
+//@EnableJpaRepositories("com.proj.visionaly.repository")
 @SpringBootApplication
-@EntityScan("com.proj.visionaly.models.*")
-@EnableJpaRepositories("com.proj.visionaly.repository")
 public class VisionalyApplication {
 
 	public static void main(String[] args) {
